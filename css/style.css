@@ -309,7 +309,12 @@ body {
   line-height: 23px;
   letter-spacing: 0.01em;
   padding: 5px 15px;
+  transition: all 0.3s ease 0s;
   background: rgb(248, 90, 71);
+}
+
+.form-main-block__button:hover {
+  background: rgb(212, 43, 25);
 }
 
 .body-main-block__slider {
@@ -614,4 +619,197 @@ body {
   .how__title {
     margin-bottom: 30px;
   }
+}
+
+/************************************DEALS*/
+
+.deals {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+@media (max-width: 991.98px) {
+  .deals {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+  }
+}
+
+@media (max-width: 767.98px) {
+  .deals {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.deals__container {}
+
+.deals__header {
+  margin-bottom: 50px;
+}
+
+.deals__tabs {}
+
+.header-deals {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-deals__content {
+  flex: 1 1 auto;
+}
+
+.header-deals__title {}
+
+.header-deals__title:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.header-deals__text {
+  line-height: 24px;
+  max-width: 470px;
+}
+
+.header-deals__link {
+  background: rgb(248, 90, 71);
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  font-weight: 500;
+  font-size: 17px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  line-height: 23px;
+  padding: 33px 22px;
+  box-shadow: 0px 1.85px 3.15px 0px rgba(248, 90, 71, 0.02), 0px 8.15px 6.52px 0px rgba(248, 90, 71, 0.03), 0px 20px 13px 0px rgba(248, 90, 71, 0.04), 0px 38.52px 25.48px 0px rgba(248, 90, 71, 0.04), 0px 64.81px 46.85px 0px rgba(248, 90, 71, 0.05), 0px 100px 80px 0px rgba(248, 90, 71, 0.07);
+  border-radius: 5px;
+}
+
+@media (max-width: 767.98px) {
+  .header-deals__link {
+    width: 100%;
+  }
+}
+
+.header-deals__link:hover {
+  background-color: rgb(212, 43, 25);
+}
+
+.button {}
+
+.tabs-deals {}
+
+.tabs-deals__nav {
+  display: flex;
+  column-gap: 50px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.tabs-deals__button {
+  font-size: 19px;
+  line-height: 26px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease 0s;
+  background-color: transparent;
+}
+
+.tabs-deals__button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transition: all 0.3s ease 0s;
+  background-color: rgb(212, 43, 25);
+}
+
+.tabs-deals__button:hover {
+  color: rgb(212, 43, 25);
+}
+
+.tabs-deals__button:hover::after {
+  width: 100%;
+}
+
+.tabs-deals__button.active {
+  color: rgb(212, 43, 25);
+}
+
+.tabs-deals__button.active::after {
+  width: 100%;
+}
+
+.tabs-deals__body {}
+
+.tabs-deals__item {
+  display: none;
+}
+
+.tabs-deals__item.active {
+  display: block;
+}
+
+.item-tabs {}
+
+.item-tabs__items {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+}
+
+.item-tabs__item {
+  position: relative;
+}
+
+.item-tabs__options {
+  font-size: 12px;
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.item-tabs__option {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding: 6px 12px;
+  transition: background-color 0.3s ease 0s;
+}
+
+.item-tabs__option:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.item-tabs__image {
+  position: relative;
+  display: block;
+  padding-bottom: 81%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.item-tabs__image img:hover {
+  transform: scale(1.1);
+}
+
+.item-tabs__image img {
+  transition: transform 0.3s ease 0s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
