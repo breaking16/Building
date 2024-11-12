@@ -23,7 +23,7 @@ document.addEventListener("click", function (e) {
         tabNavItem.classList.remove("active");
       }
       if (tabNavItem === targetElement) {
-        newActiveIndex = index;
+        newActiveIndex = index; 
       }
       // tabNavItem.classList.remove("active");
     });
